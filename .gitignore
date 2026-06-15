@@ -1,0 +1,23 @@
+# ── Riippuvuudet ─────────────────────────
+node_modules/
+
+# ── Buildituotokset ──────────────────────
+dist/
+build/
+
+# ── Ympäristömuuttujat ───────────────────
+.env
+.env.local
+.env.*.local
+
+# ── Lokit ────────────────────────────────
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ── Editorikohtaiset ─────────────────────
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
