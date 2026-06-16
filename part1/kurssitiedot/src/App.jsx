@@ -2,10 +2,20 @@ const Header = (props) => {
   return <h1>{props.course}</h1>;
 };
 
+const Part = (props) => {
+  return (
+    <p>
+      {props.name} {props.exercise}
+    </p>
+  );
+};
 const Content = (props) => {
   return (
     <div>
-      <p>
+      <Part name={props.name1} exercise={props.exercise1}></Part>
+      <Part name={props.name2} exercise={props.exercise2}></Part>
+      <Part name={props.name3} exercise={props.exercise3}></Part>
+      {/* <p>
         {props.name1} {props.exercise1}
       </p>
       <p>
@@ -13,7 +23,7 @@ const Content = (props) => {
       </p>
       <p>
         {props.name3} {props.exercise3}
-      </p>
+      </p> */}
     </div>
   );
 };
