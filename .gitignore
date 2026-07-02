@@ -21,3 +21,6 @@ yarn-error.log*
 .idea/
 *.swp
 *.swo
+
+# ── Omat muistiinpanot ───────────────────
+tuntimatskut/
