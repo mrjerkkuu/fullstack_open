@@ -1,39 +1,25 @@
-// const Hello = (props) => {
-//   console.log(props);
-//   return (
-//     <div>
-//       <p>
-//         Hello {props.name}, you are {props.age} years old
-//       </p>
-//     </div>
-//   );
-// };
+import { useState } from 'react';
 
-// const Footer = () => {
-//   return (
-//     <div>
-//       greeting app created by
-//       <a href='https://github.com/mluukkai'>mluukkai</a>
-//     </div>
-//   );
-// };
+const Display = (props) => <div>{props.value}</div>;
+const Button = (props) => <button onClick={props.onClick}>{props.text}</button>;
 
-const App = () => {
-  const friends = [
-    { name: 'Leevi', age: 4 },
-    { name: 'Venla', age: 10 },
-  ];
+const App = (props) => {
+  const [value, setValue] = useState(10);
+
+  const setToValue = (newValue) => {
+    console.log('value now', newValue);
+    setValue(newValue);
+  };
+
+  // älä määrittele komponenttia täällä!
 
   return (
     <div>
-      <p>
-        {friends[0].name} {friends[0].age}
-      </p>
-      <p>
-        {friends[1].name} {friends[1].age}
-      </p>
+      <Display value={value} />
+      <Button onClick={() => setToValue(1000)} text='thousand' />
+      <Button onClick={() => setToValue(0)} text='reset' />
+      <Button onClick={() => setToValue(value + 1)} text='increment' />
     </div>
   );
 };
-
 export default App;
