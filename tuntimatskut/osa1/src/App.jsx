@@ -3,7 +3,7 @@ import { useState } from 'react';
 const Display = (props) => <div>{props.value}</div>;
 const Button = (props) => <button onClick={props.onClick}>{props.text}</button>;
 
-const App = (props) => {
+const App = () => {
   const [value, setValue] = useState(10);
 
   const setToValue = (newValue) => {
